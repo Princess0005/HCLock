@@ -1,0 +1,130 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "PrincessV1", HidePremium = false, SaveConfig = true, ConfigFolder = "PrincessV1"})
+
+local Tab = Window:MakeTab({
+	Name = "About",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Made by Princess#0005")
+
+local Tab = Window:MakeTab({
+	Name = "Hood Games",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Q = Lock")
+
+Tab:AddButton({
+	Name = "HC Lock",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Princess0005/HCLock/main/Hood%20customs%20lock"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "HC Lock (Resolver)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Princess0005/HCLock/main/Resolver"))()
+  	end    
+})
+
+Tab:AddLabel("Anti Locks")
+Tab:AddLabel("Keybind is y")
+Tab:AddLabel("ONLY EXECUTE ONE!!!")
+
+Tab:AddButton({
+	Name = "Prediction Changer",
+	Callback = function()
+      		getgenv().Mode = "Prediction Changer" --// Modes: Underground, Sky, Prediction Changer
+getgenv().KeyBind = "y" --// Key to press to enable
+getgenv().PredictionAmount = "2" --// Number to change prediction to
+ 
+loadstring(game:HttpGet('https://fourdevils.gq/anti-aim-hub.lua'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Underground",
+	Callback = function()
+      		getgenv().Mode = "Underground" --// Modes: Underground, Sky, Prediction Changer
+getgenv().KeyBind = "y" --// Key to press to enable
+getgenv().PredictionAmount = "2" --// Number to change prediction to
+ 
+loadstring(game:HttpGet('https://fourdevils.gq/anti-aim-hub.lua'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Sky",
+	Callback = function()
+      		getgenv().Mode = "Sky" --// Modes: Underground, Sky, Prediction Changer
+getgenv().KeyBind = "y" --// Key to press to enable
+getgenv().PredictionAmount = "2" --// Number to change prediction to
+ 
+loadstring(game:HttpGet('https://fourdevils.gq/anti-aim-hub.lua'))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Admin Simulator",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Click to start auto farming")
+
+Tab:AddButton({
+	Name = "Auto farm Lvl And Diamonds",
+	Callback = function()
+      		while wait() do
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").ReplicatedRemotes.lift:FireServer(unpack(args))
+end
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Visual")
+
+Tab:AddButton({
+	Name = "Headless n Korblox",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Head.Transparency = 1
+game.Players.LocalPlayer.Character.Head.Transparency = 1
+for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
+if (v:IsA("Decal")) then
+v.Transparency = 1
+end
+end
+---------------HeadLess Above-----------------------------
+---------------NON FE -----------------------------
+---------------Korblox Below-----------------------------
+local ply = game.Players.LocalPlayer
+local chr = ply.Character
+chr.RightLowerLeg.MeshId = "902942093"
+chr.RightLowerLeg.Transparency = "1"
+chr.RightUpperLeg.MeshId = "http://www.roblox.com/asset/?id=902942096"
+chr.RightUpperLeg.TextureID = "http://roblox.com/asset/?id=902843398"
+chr.RightFoot.MeshId = "902942089"
+chr.RightFoot.Transparency = "1"
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Fps Boost",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Princess0005/HCLock/main/Fps%20Boost%20roblox"))()
+  	end    
+})
